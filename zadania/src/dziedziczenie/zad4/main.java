@@ -31,8 +31,8 @@ public class ClassB extends ClassA
  }
 }
 a. Która metoda przysłania metodę z klasy nadrzędnej/superclass?
-* metoda methodTwo
+* metoda methodTwo i methodFour
 b. Która metoda jest ukryta/niewidzialna w klasie B?
-* metoda methodThree
+* metoda methodThree i methodOne
 */
 }
