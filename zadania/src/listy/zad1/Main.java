@@ -6,20 +6,22 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        List<String> lista = new ArrayList<>(10);
+        List<String> lista = new ArrayList<>(100);
         Scanner sc = new Scanner(System.in);
+        ;
+        String sam="";
         for(int i=0;i< 10;i++)
         {
 
             System.out.print("Element["+i+"]= ");
-            lista.add(i,sc.next());
-            for (int j=0 ; j<i;j++){
-                if (lista.get(i)==lista.get(j)){
-                    lista.remove(j);
-                    i=i+1;
+sam=sc.next();
 
+           if (!lista.contains(sam)){
+               lista.add(i,sam);
 
-                }
+           }
+           else if (lista.contains(sam)){
+                i=i-1;
             }
 
 
