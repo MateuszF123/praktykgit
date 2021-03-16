@@ -1,5 +1,7 @@
 package salonsamochodowy;
 
+import jdk.jshell.JShellException;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -26,6 +28,7 @@ public class Main {
         lista.add(11,"[11] wyjście");
         Scanner sc = new Scanner(System.in);
         boolean programrun = true;
+
 
         while(programrun)
         {
@@ -141,6 +144,7 @@ public class Main {
         }
         }catch (Exception exception){
             System.out.println("złe podane dane");
+           
         }
     }
 }
