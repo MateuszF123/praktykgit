@@ -11,6 +11,7 @@ public class Main {
          produkty.uzupełnienie1();
 
 
+
          List<String> produktdodwkoszyku = new ArrayList<>(5);
          List<Double> cenywkoszyku=new ArrayList<>(5);
 
@@ -18,9 +19,12 @@ public class Main {
              try {
 
 
-                 System.out.println("Dzień Dobry. Ile pieniedzy masz na zakupy ");
-                 dane.pieniadze = sc.nextDouble();
-                 System.out.println("na zakupy możesz wydać "+dane.pieniadze+" zł");
+
+
+                 System.out.println("Dzień Dobry. Witamy w naszym sklepie. Ile pieniedzy masz na zakupy ");
+                     dane.pieniadze = sc.nextDouble();
+                     System.out.println("na zakupy możesz wydać " + dane.pieniadze + " zł");
+
 
 
                  while (dane.pobieradan) {
@@ -36,13 +40,20 @@ public class Main {
                              produkty.pokazanieproduktów();
                              System.out.println("który produkt chcesz dodać");
                              dane.c= sc.nextInt();
-                             produktdodwkoszyku.add(produkty.produktdodw.get(dane.c));
+
                              System.out.println("ile "+produkty.produktdodw.get(dane.c)+" chcesz dodać do koszyka");
                              dane.x= sc.nextInt();
-                             cenywkoszyku.add(produkty.ceny.get(dane.c)* dane.x);
+                             if (dane.x>0){
+                                 produktdodwkoszyku.add(produkty.produktdodw.get(dane.c));
+                                 cenywkoszyku.add(produkty.ceny.get(dane.c)* dane.x);
+                                 System.out.println("dodałeś "+produkty.produktdodw.get(dane.c)+" w cenie "+produkty.ceny.get(dane.c)+" zł");
+                             }
+                             if (dane.x==0){
+                                 System.out.println("nie możesz dodać 0 produktów do koszyka ");
+                             }
 
 
-                             System.out.println("dodałeś "+produkty.produktdodw.get(dane.c)+" w cenie "+produkty.ceny.get(dane.c)+" zł");
+
 
                              break;
                          }
@@ -93,7 +104,7 @@ public class Main {
 
                              if (dane.sd.equals("tak")){
                                  produktdodwkoszyku.clear();
-                                 produktdodwkoszyku.clear();
+                                 cenywkoszyku.clear();
                                  System.out.println("usunąłeś wszystkie produkty");
                              }
 
@@ -124,16 +135,29 @@ public class Main {
                              System.out.println(produktdodwkoszyku.contains(sc.next()));
                              break;
                          }
+                         case "9" -> {
+produkty.pokazanieproduktów9();
+
+                             break;
+                         }
+                         case "10" -> {
+                             System.out.println("na zakupy możesz wydać maksymalnie "+dane.pieniadze+" zł");
+
+                             break;
+                         }
+                         case "11" -> {
+                             System.out.println("podaj ilość pieniedzy jakie masz na zakupy");
+                             dane.pieniadze = sc.nextDouble();
+                             System.out.println("na zakupy możesz wydać " + dane.pieniadze + " zł");
+
+                             break;
+                         }
                          default -> {
                              System.out.println("złe dane");
                              break;
                          }
 
                      }
-
-
-
-
 
 
 

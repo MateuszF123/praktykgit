@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class produkty {
     List<String> produktdodw = new ArrayList<>(5);
     List<Double> ceny=new ArrayList<>(5);
-    void pokazanieproduktów(){
+    public void pokazanieproduktów(){
 
         for (int i=0;i<produktdodw.size();i++) {
             System.out.println("naciśnij "+i+" "+produktdodw.get(i)+" "+ceny.get(i)+" zł");
@@ -19,8 +19,21 @@ public class produkty {
 
 
     }
+    public void pokazanieproduktów9(){
+        System.out.println("w sklepie jest ");
+        for (int i=0;i<produktdodw.size();i++) {
 
-    void uzupełnienie(){
+            System.out.println(produktdodw.get(i)+" "+ceny.get(i)+" zł");
+
+        }
+
+
+
+
+
+    }
+
+    public void uzupełnienie(){
 
         produktdodw.add("mleko");
         produktdodw.add("chleb");
@@ -41,7 +54,7 @@ public class produkty {
 
 
     }
-    void uzupełnienie1(){
+    public void uzupełnienie1(){
 
 
         ceny.add(4.2);
@@ -65,7 +78,7 @@ public class produkty {
     }
 
 
-    void menu(){
+    public void menu(){
         List<String> menu = new ArrayList<>(11);
         menu.add(0, "[0]dodaj produkt");
         menu.add(1, "[1]idz do kasy");
@@ -76,13 +89,16 @@ public class produkty {
         menu.add(6, "[6] Wyświetlenie ceny");
         menu.add(7, "[7] wyświetl wszystkie produkty w koszyku");
         menu.add(8, "[8] sprawdz czy dany produkt jest w koszyku");
+        menu.add(9, "[9] pokaż produkty dostępne w sklepię");
+        menu.add(10, "[10] pokaż ile pieniedzy masz na zakupy");
+        menu.add(11, "[11] zmień ilość pieniedzy na zakupy");
         System.out.println("wybierz jedną z opcji:");
         for (int i = 0; i < menu.size(); i++) {
             System.out.println(menu.get(i));
 
         }
     }
-    void kreska() {
+    public void kreska() {
         System.out.println("-----------------------------------------------------------");}
 
 }

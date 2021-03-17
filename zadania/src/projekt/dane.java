@@ -1,7 +1,7 @@
 package projekt;
 
 public class dane {
-    double pieniadze = 0;
+    double pieniadze = 0.00;
     double cenazazakupy=0;
     int c;
     String sd="";
