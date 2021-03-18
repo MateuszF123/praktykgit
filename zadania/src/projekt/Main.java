@@ -15,16 +15,26 @@ public class Main {
          List<String> produktdodwkoszyku = new ArrayList<>(5);
          List<Double> cenywkoszyku=new ArrayList<>(5);
 
+
+
+
          do {
              try {
-
-
-
 
                  System.out.println("Dzień Dobry. Witamy w naszym sklepie. Ile pieniedzy masz na zakupy ");
                      dane.pieniadze =Math.abs(sc.nextDouble());
                      System.out.println("na zakupy możesz wydać " + dane.pieniadze + " zł");
+                     dane.run=false;
+             } catch (Exception exception) {
+                 System.out.println("błedne dane spróbój ponownie");
+                 sc.next();
+             }
+         }while (dane.run);
 
+
+
+         do {
+             try {
 
 
                  while (dane.pobieradan) {

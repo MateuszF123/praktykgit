@@ -7,6 +7,7 @@ public class dane {
 
     String sd="";
     boolean pobieradan = true;
+    boolean run = true;
     String opcja = "";
     int x;
 }
