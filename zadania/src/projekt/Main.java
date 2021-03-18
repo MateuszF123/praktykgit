@@ -22,7 +22,7 @@ public class Main {
 
 
                  System.out.println("Dzień Dobry. Witamy w naszym sklepie. Ile pieniedzy masz na zakupy ");
-                     dane.pieniadze = sc.nextDouble();
+                     dane.pieniadze =Math.abs(sc.nextDouble());
                      System.out.println("na zakupy możesz wydać " + dane.pieniadze + " zł");
 
 
@@ -147,7 +147,7 @@ produkty.pokazanieproduktów9();
                          }
                          case "11" -> {
                              System.out.println("podaj ilość pieniedzy jakie masz na zakupy");
-                             dane.pieniadze = sc.nextDouble();
+                             dane.pieniadze =Math.abs(sc.nextDouble());
                              System.out.println("na zakupy możesz wydać " + dane.pieniadze + " zł");
 
                              break;
